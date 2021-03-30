@@ -94,7 +94,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegate {
         print(#function)
         //let sb = UIStoryboard(name: "FeedViewController", bundle: nil)
 //        let feedVC = sb.instantiateInitialViewController() as? FeedViewController
-        let feedVC: FeedViewController = FeedViewController.loadFromStoryboard()
+        let feedVC: NewsFeedViewController = NewsFeedViewController.loadFromStoryboard()
         let navVC = UINavigationController(rootViewController: feedVC)
 
         self.window?.rootViewController = navVC
