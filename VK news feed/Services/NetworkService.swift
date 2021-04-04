@@ -38,7 +38,7 @@ final class NetworkService: Networking {
         let request = URLRequest(url: url)
         let task = createDataTask(from: request, completion: completion)
         task.resume()
-        print(url)
+        //print(url)
     }
     
     private func createDataTask(from request:URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {

@@ -86,7 +86,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceDelegate {
     
     func authServiceShouldShow(_ viewController: UIViewController) {
         print(#function)
-        print("From scene delegate")
+        //print("From scene delegate")
         window?.rootViewController?.present(viewController, animated: true, completion: nil)
     }
     
