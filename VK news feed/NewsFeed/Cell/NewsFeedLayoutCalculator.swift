@@ -10,7 +10,7 @@ import UIKit
 struct Sizes: FeedCellSizes {
     var postLabelFrame: CGRect
     var attachmentFrame: CGRect
-    var bottomView: CGRect
+    var bottomViewFrame: CGRect
     var totalHeight: CGFloat
 }
 
@@ -20,6 +20,8 @@ struct Constants {
     static let postLabelInsets = UIEdgeInsets(top: 8 + topViewHeight + 8 , left: 8, bottom: 8, right: 8)
     
     static let postLabelFront = UIFont.systemFont(ofSize: 15)
+    
+    static let bottomViewHeight = CGFloat(44)
     
 }
 
@@ -51,12 +53,42 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
             postLabelFrame.size = CGSize(width: width, height: height)
         }
         
+        //MARK: AttachmentFrame
         
+        //maxY - это самая нижняя точка текста поста
+        let attachmentTop = postLabelFrame.size == CGSize.zero ? Constants.postLabelInsets.top : postLabelFrame.maxY + Constants.postLabelInsets.bottom
+        
+        var attachmentFrame = CGRect(origin: CGPoint(x: 0, y: attachmentTop), size: CGSize.zero)
+        
+        if let attachment = photoAttachment {
+            
+            //print("Height \(attachment.height), width \(attachment.width)")
+            
+            // выясняем соотношение, только надо делить не инты
+            let photoHeight = Float(attachment.height)
+            let photoWidth = Float(attachment.width)
+            let ratio = CGFloat(photoHeight / photoWidth)
+            
+            //print("Ratio: \(ratio)")
+            
+            
+            attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+        }
+        
+        //MARK: BottomViewFrame
+        
+        let bottomViewTop = max(postLabelFrame.maxY, attachmentFrame.maxY)
+        
+        let bottomViewFrame = CGRect(origin: CGPoint(x: 0, y: bottomViewTop), size: CGSize(width: cardViewWidth, height: Constants.bottomViewHeight))
+       
+        //MARK: TotalHeight
+        
+        let totalHeight = bottomViewFrame.maxY + Constants.cardInsets.bottom
         
         return Sizes(postLabelFrame: postLabelFrame,
-                     attachmentFrame: CGRect.zero,
-                     bottomView: CGRect.zero,
-                     totalHeight: CGFloat(300))
+                     attachmentFrame: attachmentFrame,
+                     bottomViewFrame: bottomViewFrame,
+                     totalHeight: totalHeight)
     }
     
 }

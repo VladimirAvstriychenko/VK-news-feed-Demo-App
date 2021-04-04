@@ -25,7 +25,7 @@ protocol FeedCellViewModel {
 protocol FeedCellSizes {
     var postLabelFrame: CGRect { get }
     var attachmentFrame: CGRect { get }
-    var bottomView: CGRect { get }
+    var bottomViewFrame: CGRect { get }
     var totalHeight: CGFloat { get }
 }
 
@@ -51,8 +51,12 @@ class NewsfeedCell: UITableViewCell {
     @IBOutlet weak var postImageView: WebImageView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var bottomView: UIView!
-    
-    
+   
+    //Чтобы не было глюков с повторными фотографиями
+    override func prepareForReuse() {
+        iconImageView.set(imageURL: nil)
+        postImageView.set(imageURL: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
