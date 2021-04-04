@@ -28,8 +28,12 @@ class NewsFeedInteractor: NewsFeedBusinessLogic {
       
     case .getNewsFeed:
         fetcher.getFeed { [weak self] (feedResponse) in
+            
             guard let feedResponse = feedResponse else { return }
 
+            //feedResponse.items.map({ print($0.sourceId)})
+            //feedResponse.groups.map({print($0.photo)})
+            
             self?.presenter?.presentData(response: .presentNewsFeed(feed: feedResponse))
         }
     }
