@@ -47,7 +47,7 @@ class NewsfeedCell: UITableViewCell {
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
-    @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var sharesLabel: UILabel!
     @IBOutlet weak var postImageView: WebImageView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var bottomView: UIView!
@@ -80,8 +80,8 @@ class NewsfeedCell: UITableViewCell {
         postLabel.text = viewModel.text
         likesLabel.text = viewModel.likes
         commentsLabel.text = viewModel.comments
-        viewsLabel.text = viewModel.shares
-        shareLabel.text = viewModel.views
+        viewsLabel.text = viewModel.views
+        sharesLabel.text = viewModel.shares
         
         postLabel.frame = viewModel.sizes.postLabelFrame
         postImageView.frame = viewModel.sizes.attachmentFrame

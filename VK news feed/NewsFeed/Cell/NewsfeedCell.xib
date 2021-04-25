@@ -145,7 +145,7 @@
                 <outlet property="nameLabel" destination="7Id-Mg-CRu" id="vw7-4O-I4J"/>
                 <outlet property="postImageView" destination="p3y-Dc-osL" id="E6w-0L-ZeL"/>
                 <outlet property="postLabel" destination="Hya-Y7-o3O" id="xwA-9f-OUT"/>
-                <outlet property="shareLabel" destination="yuE-0v-CzQ" id="m5Q-y7-vqo"/>
+                <outlet property="sharesLabel" destination="yuE-0v-CzQ" id="m5Q-y7-vqo"/>
                 <outlet property="viewsLabel" destination="BXq-19-u75" id="Lr6-wA-jGl"/>
             </connections>
             <point key="canvasLocation" x="-161.59420289855075" y="-115.17857142857142"/>
