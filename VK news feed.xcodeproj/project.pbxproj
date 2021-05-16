@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E706195E260A538B004E7994 /* AuthentificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E706195D260A538B004E7994 /* AuthentificationService.swift */; };
-		E7061960260A58E9004E7994 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; };
-		E7061961260A58E9004E7994 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7061966260A5A1B004E7994 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7061965260A5A1B004E7994 /* AuthViewController.storyboard */; };
 		E7061969260A5C43004E7994 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7061968260A5C43004E7994 /* AuthViewController.swift */; };
 		E71995192610E7730046C0C4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71995182610E7730046C0C4 /* NetworkService.swift */; };
@@ -21,6 +19,8 @@
 		E72C2DCF2618D89800776E52 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C2DCE2618D89800776E52 /* WebImageView.swift */; };
 		E7896E6326233DAF00302333 /* NewsFeedCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896E6226233DAF00302333 /* NewsFeedCodeCell.swift */; };
 		E7896E652623432A00302333 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896E642623432A00302333 /* Constraints.swift */; };
+		E78C2E8C26514D52009C21D7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; };
+		E78C2E8D26514D52009C21D7 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7986E302624BE83004455E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7986E2F2624BE83004455E3 /* Constants.swift */; };
 		E799ED9A2613921D00F2DF01 /* NewsFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E799ED992613921D00F2DF01 /* NewsFeedViewController.storyboard */; };
 		E799ED9D2613985600F2DF01 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799ED9C2613985600F2DF01 /* NewsFeedCell.swift */; };
@@ -39,13 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E7061962260A58E9004E7994 /* Embed Frameworks */ = {
+		E78C2E8E26514D52009C21D7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7061961260A58E9004E7994 /* VKSdkFramework.xcframework in Embed Frameworks */,
+				E78C2E8D26514D52009C21D7 /* VKSdkFramework.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7061960260A58E9004E7994 /* VKSdkFramework.xcframework in Frameworks */,
+				E78C2E8C26514D52009C21D7 /* VKSdkFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 				E7DF370526090ECE0030F539 /* Frameworks */,
 				E7DF370626090ECE0030F539 /* Resources */,
 				E7DF3728260914CC0030F539 /* ShellScript */,
-				E7061962260A58E9004E7994 /* Embed Frameworks */,
+				E78C2E8E26514D52009C21D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
