@@ -21,6 +21,8 @@
 		E7896E652623432A00302333 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896E642623432A00302333 /* Constraints.swift */; };
 		E78C2E8C26514D52009C21D7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; };
 		E78C2E8D26514D52009C21D7 /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E78C2E91265159AE009C21D7 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78C2E90265159AE009C21D7 /* GalleryCollectionView.swift */; };
+		E78C2E9326515AB5009C21D7 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78C2E9226515AB5009C21D7 /* GalleryCollectionViewCell.swift */; };
 		E7986E302624BE83004455E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7986E2F2624BE83004455E3 /* Constants.swift */; };
 		E799ED9A2613921D00F2DF01 /* NewsFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E799ED992613921D00F2DF01 /* NewsFeedViewController.storyboard */; };
 		E799ED9D2613985600F2DF01 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799ED9C2613985600F2DF01 /* NewsFeedCell.swift */; };
@@ -66,6 +68,8 @@
 		E72C2DCE2618D89800776E52 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		E7896E6226233DAF00302333 /* NewsFeedCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCodeCell.swift; sourceTree = "<group>"; };
 		E7896E642623432A00302333 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		E78C2E90265159AE009C21D7 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		E78C2E9226515AB5009C21D7 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7986E2F2624BE83004455E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E799ED992613921D00F2DF01 /* NewsFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeedViewController.storyboard; sourceTree = "<group>"; };
 		E799ED9C2613985600F2DF01 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
@@ -139,6 +143,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E78C2E8F26515995009C21D7 /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				E78C2E90265159AE009C21D7 /* GalleryCollectionView.swift */,
+				E78C2E9226515AB5009C21D7 /* GalleryCollectionViewCell.swift */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
 		E799ED9B2613984800F2DF01 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 		E7D83F5926124B69007C0420 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				E78C2E8F26515995009C21D7 /* GalleryView */,
 				E799ED9B2613984800F2DF01 /* Cell */,
 				E7D83F5E26124BA5007C0420 /* NewsFeedViewController.swift */,
 				E799ED992613921D00F2DF01 /* NewsFeedViewController.storyboard */,
@@ -306,6 +320,7 @@
 			files = (
 				E7061969260A5C43004E7994 /* AuthViewController.swift in Sources */,
 				E7986E302624BE83004455E3 /* Constants.swift in Sources */,
+				E78C2E91265159AE009C21D7 /* GalleryCollectionView.swift in Sources */,
 				E7896E652623432A00302333 /* Constraints.swift in Sources */,
 				E72C2DCF2618D89800776E52 /* WebImageView.swift in Sources */,
 				E7D83F6326124BA5007C0420 /* NewsFeedRouter.swift in Sources */,
@@ -323,6 +338,7 @@
 				E71A149E2619EC91002137FF /* NewsFeedLayoutCalculator.swift in Sources */,
 				E7D83F6226124BA5007C0420 /* NewsFeedWorker.swift in Sources */,
 				E71995192610E7730046C0C4 /* NetworkService.swift in Sources */,
+				E78C2E9326515AB5009C21D7 /* GalleryCollectionViewCell.swift in Sources */,
 				E7D83F6526124BA5007C0420 /* NewsFeedViewController.swift in Sources */,
 				E799ED9D2613985600F2DF01 /* NewsFeedCell.swift in Sources */,
 				E7D83F6626124BA5007C0420 /* NewsFeedInteractor.swift in Sources */,
