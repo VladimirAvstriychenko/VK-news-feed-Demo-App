@@ -33,14 +33,31 @@ final class NewsFeedCodeCell: UITableViewCell {
         return view
     }()
     
-    let postLabel: UILabel = {
-        let label = UILabel()
+//    let postLabel: UILabel = {
+//        let label = UILabel()
+//        //label.translatesAutoresizingMaskIntoConstraints = false
+//        label.numberOfLines = 0
+//        label.font = Constants.postLabelFront
+//        //label.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+//        label.textColor = #colorLiteral(red: 0.2617386281, green: 0.2668440044, blue: 0.2710085809, alpha: 1)
+//        return label
+//    }()
+    
+    let postLabel: UITextView = {
+        let textView = UITextView()
         //label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.font = Constants.postLabelFront
+        textView.isScrollEnabled = false
+        textView.isSelectable = true
+        textView.isUserInteractionEnabled = true
+        textView.isEditable = false
+        textView.font = Constants.postLabelFront
+        textView.dataDetectorTypes = UIDataDetectorTypes.all
+        
+        let padding = textView.textContainer.lineFragmentPadding
+        textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -padding, bottom: 0, right: -padding)
         //label.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-        label.textColor = #colorLiteral(red: 0.2617386281, green: 0.2668440044, blue: 0.2710085809, alpha: 1)
-        return label
+        textView.textColor = #colorLiteral(red: 0.2617386281, green: 0.2668440044, blue: 0.2710085809, alpha: 1)
+        return textView
     }()
     
     let postImageView: WebImageView = {
