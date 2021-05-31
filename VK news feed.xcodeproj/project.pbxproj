@@ -18,6 +18,9 @@
 		E7224794260BE2F00041DBFE /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7224793260BE2F00041DBFE /* UIViewController+Storyboard.swift */; };
 		E72C2DCF2618D89800776E52 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C2DCE2618D89800776E52 /* WebImageView.swift */; };
 		E7629071265F8F8B0053F10C /* Rowlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7629070265F8F8B0053F10C /* Rowlayout.swift */; };
+		E77740852660EAA7006100AF /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77740842660EAA7006100AF /* TitleView.swift */; };
+		E77740872660EB61006100AF /* InsetableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77740862660EB61006100AF /* InsetableTextField.swift */; };
+		E777408926610B1F006100AF /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777408826610B1F006100AF /* UserResponse.swift */; };
 		E7896E6326233DAF00302333 /* NewsFeedCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896E6226233DAF00302333 /* NewsFeedCodeCell.swift */; };
 		E7896E652623432A00302333 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896E642623432A00302333 /* Constraints.swift */; };
 		E78C2E8C26514D52009C21D7 /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E706195F260A58E9004E7994 /* VKSdkFramework.xcframework */; };
@@ -68,6 +71,9 @@
 		E7224793260BE2F00041DBFE /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E72C2DCE2618D89800776E52 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		E7629070265F8F8B0053F10C /* Rowlayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rowlayout.swift; sourceTree = "<group>"; };
+		E77740842660EAA7006100AF /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		E77740862660EB61006100AF /* InsetableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetableTextField.swift; sourceTree = "<group>"; };
+		E777408826610B1F006100AF /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		E7896E6226233DAF00302333 /* NewsFeedCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCodeCell.swift; sourceTree = "<group>"; };
 		E7896E642623432A00302333 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		E78C2E90265159AE009C21D7 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E719951E2610FCDD0046C0C4 /* FeedResponse.swift */,
+				E777408826610B1F006100AF /* UserResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +150,15 @@
 				E7896E642623432A00302333 /* Constraints.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E77740832660EA95006100AF /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				E77740842660EAA7006100AF /* TitleView.swift */,
+				E77740862660EB61006100AF /* InsetableTextField.swift */,
+			);
+			path = TitleView;
 			sourceTree = "<group>";
 		};
 		E78C2E8F26515995009C21D7 /* GalleryView */ = {
@@ -170,6 +186,7 @@
 		E7D83F5926124B69007C0420 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				E77740832660EA95006100AF /* TitleView */,
 				E78C2E8F26515995009C21D7 /* GalleryView */,
 				E799ED9B2613984800F2DF01 /* Cell */,
 				E7D83F5E26124BA5007C0420 /* NewsFeedViewController.swift */,
@@ -321,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E77740872660EB61006100AF /* InsetableTextField.swift in Sources */,
 				E7061969260A5C43004E7994 /* AuthViewController.swift in Sources */,
 				E7986E302624BE83004455E3 /* Constants.swift in Sources */,
 				E78C2E91265159AE009C21D7 /* GalleryCollectionView.swift in Sources */,
@@ -331,7 +349,9 @@
 				E706195E260A538B004E7994 /* AuthentificationService.swift in Sources */,
 				E7DF370C26090ECE0030F539 /* AppDelegate.swift in Sources */,
 				E7629071265F8F8B0053F10C /* Rowlayout.swift in Sources */,
+				E777408926610B1F006100AF /* UserResponse.swift in Sources */,
 				E7D83F582612435D007C0420 /* NetworkDataFetcher.swift in Sources */,
+				E77740852660EAA7006100AF /* TitleView.swift in Sources */,
 				E7DF370E26090ECE0030F539 /* SceneDelegate.swift in Sources */,
 				E7224794260BE2F00041DBFE /* UIViewController+Storyboard.swift in Sources */,
 				E7896E6326233DAF00302333 /* NewsFeedCodeCell.swift in Sources */,
