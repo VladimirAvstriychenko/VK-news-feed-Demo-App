@@ -19,6 +19,7 @@
 		E71A14A02619FE2D002137FF /* String + Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A149F2619FE2D002137FF /* String + Height.swift */; };
 		E7224794260BE2F00041DBFE /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7224793260BE2F00041DBFE /* UIViewController+Storyboard.swift */; };
 		E72C2DCF2618D89800776E52 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C2DCE2618D89800776E52 /* WebImageView.swift */; };
+		E73D48A32666E3C800236B81 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D48A22666E3C800236B81 /* GradientView.swift */; };
 		E7629071265F8F8B0053F10C /* Rowlayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7629070265F8F8B0053F10C /* Rowlayout.swift */; };
 		E77740852660EAA7006100AF /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77740842660EAA7006100AF /* TitleView.swift */; };
 		E77740872660EB61006100AF /* InsetableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77740862660EB61006100AF /* InsetableTextField.swift */; };
@@ -74,6 +75,7 @@
 		E71A149F2619FE2D002137FF /* String + Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Height.swift"; sourceTree = "<group>"; };
 		E7224793260BE2F00041DBFE /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		E72C2DCE2618D89800776E52 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
+		E73D48A22666E3C800236B81 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E7629070265F8F8B0053F10C /* Rowlayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rowlayout.swift; sourceTree = "<group>"; };
 		E77740842660EAA7006100AF /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		E77740862660EB61006100AF /* InsetableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetableTextField.swift; sourceTree = "<group>"; };
@@ -157,11 +159,19 @@
 			isa = PBXGroup;
 			children = (
 				E7224793260BE2F00041DBFE /* UIViewController+Storyboard.swift */,
-				E72C2DCE2618D89800776E52 /* WebImageView.swift */,
 				E71A149F2619FE2D002137FF /* String + Height.swift */,
 				E7896E642623432A00302333 /* Constraints.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E73D48A42666E94100236B81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E73D48A22666E3C800236B81 /* GradientView.swift */,
+				E72C2DCE2618D89800776E52 /* WebImageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E77740832660EA95006100AF /* TitleView */ = {
@@ -235,6 +245,7 @@
 			children = (
 				E7DF370B26090ECE0030F539 /* AppDelegate.swift */,
 				E7DF370D26090ECE0030F539 /* SceneDelegate.swift */,
+				E73D48A42666E94100236B81 /* Views */,
 				E706195C260A5372004E7994 /* Services */,
 				E7224795260BE2FF0041DBFE /* Helpers */,
 				E7D83F5926124B69007C0420 /* NewsFeed */,
@@ -355,6 +366,7 @@
 			files = (
 				E77740872660EB61006100AF /* InsetableTextField.swift in Sources */,
 				E7061969260A5C43004E7994 /* AuthViewController.swift in Sources */,
+				E73D48A32666E3C800236B81 /* GradientView.swift in Sources */,
 				E7986E302624BE83004455E3 /* Constants.swift in Sources */,
 				E78C2E91265159AE009C21D7 /* GalleryCollectionView.swift in Sources */,
 				E7896E652623432A00302333 /* Constraints.swift in Sources */,

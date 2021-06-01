@@ -63,7 +63,7 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
                
         
         
-        view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        //view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
         interactor?.makeRequest(request: .getNewsFeed)
         interactor?.makeRequest(request: .getUser)
@@ -86,6 +86,15 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
     }
     
     private func setupTopBars(){
+        
+        let topBar = UIView(frame: UIApplication.shared.statusBarFrame)
+        self.view.addSubview(topBar)
+        topBar.backgroundColor = .white
+        topBar.layer.shadowColor = UIColor.black.cgColor
+        topBar.layer.shadowOpacity = 0.3
+        topBar.layer.shadowOffset = CGSize.zero
+        topBar.layer.shadowRadius = 8
+        
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.titleView = titleView
@@ -127,7 +136,7 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
     //MARK: NewsfeedCodeCellDelegatesi
     
     func revealPost(for cell: NewsFeedCodeCell) {
-        print("test111")
+        //print("test111")
         guard let indexPath = table.indexPath(for: cell) else {return}
         let cellViewModel = feedViewModel.cells[indexPath.row]
         
