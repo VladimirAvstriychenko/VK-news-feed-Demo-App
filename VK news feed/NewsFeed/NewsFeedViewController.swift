@@ -18,11 +18,13 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
     var interactor: NewsFeedBusinessLogic?
     var router: (NSObjectProtocol & NewsFeedRoutingLogic)?
     
-    private var feedViewModel = FeedViewModel.init(cells: [])
+    private var feedViewModel = FeedViewModel.init(cells: [], footerTitle: nil)
     
     @IBOutlet weak var table: UITableView!
     
     private var titleView = TitleView()
+    
+    private lazy var footerView = FooterView()
     
     private var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -80,6 +82,7 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
         table.backgroundColor = .clear
         
         table.addSubview(refreshControl)
+        table.tableFooterView = footerView
     }
     
     private func setupTopBars(){
@@ -99,12 +102,26 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
         
         case .displayNewsFeed(feedViewModel: let feedViewModel):
             self.feedViewModel = feedViewModel
+            footerView.setTitle(feedViewModel.footerTitle)
             table.reloadData()
             refreshControl.endRefreshing()
+            //footerView.setTitle(feedViewModel.cells.count)
+            
         case .displayUser(userViewModel: let userViewModel):
             titleView.set(userViewModel: userViewModel)
+   
+        case .displayFooterLoader:
+            footerView.showLoader()
+            
         }
         
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y > scrollView.contentSize.height * 0.9 { //90 процентов ленты
+            //interactor?.makeRequest(request: .getNewsFeed)
+            interactor?.makeRequest(request: .getNextBatch)
+        }
     }
     
     //MARK: NewsfeedCodeCellDelegatesi
