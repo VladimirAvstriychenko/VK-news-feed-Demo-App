@@ -74,6 +74,8 @@ final class NewsFeedCodeCell: UITableViewCell {
         button.contentHorizontalAlignment = .left
         button.contentVerticalAlignment = .center
         button.setTitle("Показать полностью...", for: .normal)
+        button.isUserInteractionEnabled = true
+
         return button
     }()
     
@@ -238,6 +240,9 @@ final class NewsFeedCodeCell: UITableViewCell {
         overlayThirdLayerOnTopView()
         overlayThirdLayerOnBottomView()
         overlayFourthLayerOnBottomViewViews()
+        
+        //cardView.isUserInteractionEnabled = false
+        contentView.isUserInteractionEnabled = false
         
         
         //cardView constraints NSLayoutAnchor

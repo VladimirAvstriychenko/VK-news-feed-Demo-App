@@ -108,7 +108,7 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
                     photos.append(photoSize)
                 }
                 
-                let rowHeight = RowLayout.rowHeightCounter(superviewWidth: cardViewWidth, photosArray: photos)
+                 let rowHeight = RowLayout.rowHeightCounter(superviewWidth: cardViewWidth, photosArray: photos)
                 attachmentFrame.size = CGSize(width: cardViewWidth, height: rowHeight!)
             }
             

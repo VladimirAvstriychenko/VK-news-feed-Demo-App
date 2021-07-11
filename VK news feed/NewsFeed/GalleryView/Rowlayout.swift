@@ -63,7 +63,7 @@ class RowLayout: UICollectionViewLayout{
         
         var xOffset = [CGFloat](repeating: 0, count: RowLayout.numberOfRows)
         var row = 0
-        for item in 0 ..< collectionView.numberOfItems(inSection: 0){
+        for item in 0 ..< collectionView.numberOfItems(inSection: 0){ //Раскидываем картинки по галлерее по строкам
             let indexPath = IndexPath(item: item, section: 0)
             
             let ratio = photosRatios[indexPath.row]
@@ -89,7 +89,7 @@ class RowLayout: UICollectionViewLayout{
         var rowHeight: CGFloat
         
         let photoWithMinRatio = photosArray.min { (first, second) -> Bool in
-            (first.height / first.width) < (second.height / second.width)
+            (first.height / first.width) < (second.height / second.width) // Здесь берем самую широкую картинку, чтобы она поместилась по ширине экрана, и нам не пришлось ее листать влево-вправо, подгоняем ее ширину, а затем пропорционально высоту картинки, и затем уже возвращаем высоту
         }
         
         guard let myPhotoWithMinRatio = photoWithMinRatio else { return nil }
